@@ -5,12 +5,14 @@
 
 #Function to get and validate user input
 def get_num_terms():
-  while true:
-    print("How many terms od the fibbonacci sequence do you want?")
+  while True:
+    print("How many terms of the fibbonacci sequence do you want?")
     num = input()
-    if num > 0:
-      return num
-    else 
+    if num.isdigit():
+        num = int(num)
+        if num > 0:
+          return num
+    else: 
       print("Error please input a positive number")
 
 # Function to make fibbonacci sequence
@@ -24,4 +26,12 @@ def fibonacci_sequence(n):
 
 #function to print the sequence
 def print_sequence(seq):
-  print("\nFibbonacci Sequence: seq")
+  print("\nFibbonacci Sequence: ", seq)
+
+def main():
+  num_terms = get_num_terms()
+  seq = fibonacci_sequence(num_terms)
+  print_sequence(seq)
+  
+if __name__ == "__main__":
+  main()
