@@ -40,8 +40,10 @@ def calculate_frequencies(sentence):
     words = []
     frequencies = []
 
-    #remove punctuation from the end
-    sentence_remove = sentence[:-1].lower()
+    #remove punctuation 
+     if word[-1] in ".!?,":   
+        word = word[:-1]
+    #sentence_remove = sentence[:-1].lower()
 
     #split the list
     word_list = sentence_remove.split()
