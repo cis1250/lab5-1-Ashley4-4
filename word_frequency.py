@@ -40,7 +40,7 @@ def calculate_frequencies(sentence):
     words = []
     frequencies = []
 
-    #remove punctuation 
+    #remove punctuation and put all of the letters to lower case
     sentence_remove = sentence[:-1].lower()
 
     #split the list
