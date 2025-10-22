@@ -66,8 +66,8 @@ def print_frequincies(words, frequincies):
 # main function
 def main():
     sentence = get_sentence()
-    words, freqs = calculate_frequencies(sentence)
-    print_frequincies(words, freqs)
+    words, frequincies = calculate_frequencies(sentence)
+    print_frequincies(words, frequincies)
 
 if __name__ == "__main__":
     main() 
