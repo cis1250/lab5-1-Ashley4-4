@@ -40,22 +40,23 @@ def calculate_frequencies(sentence):
     words = []
     frequencies = []
 
-    #remove punctuation and put all of the letters to lower case
-    sentence_remove = sentence[:-1].lower()
-
     #split the list
-    word_list = sentence_remove.split()
+    word_list = sentence.split()
 
     #count word frquencies
     for word in word_list:
-        if word in words:
-            index = words.index(word)
-            frequencies[index] += 1
-        else:
+         
+         word = word.lower()
+
+         if word[-1] in ".!?,":   
+            word = word[:-1]
+            if word in words:
+                index = words.index(word)
+                frequencies[index] += 1
+         else:
             words.append(word)
             frequencies.append(1)
     return words, frequencies
-
 
 #Function to print word frequencies 
 def print_frequincies(words, frequincies):
